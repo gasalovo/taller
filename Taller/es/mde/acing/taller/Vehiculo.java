@@ -38,7 +38,7 @@ public class Vehiculo implements Reparable {
 	public int diagnosticar() {
 		int estimacionHoras = 0;
 		int coste = 0;
-		System.out.println(estaAveriado());
+
 		if (estaAveriado()) {
 			for (Averia item: getAverias()) {
 				estimacionHoras += item.getHoras();
@@ -84,7 +84,7 @@ public class Vehiculo implements Reparable {
 
 	@Override
 	public String toString() {
-		return "Vehiculo [matricula=" + matricula + ", color=" + color + ", modelo=" + modelo + ", averias=" + averias
+		return "Vehiculo [matricula=" + matricula + ", fechaEntrada: "+fechaEntrada+" , averias=" + averias
 				+ "]";
 	}
 	
